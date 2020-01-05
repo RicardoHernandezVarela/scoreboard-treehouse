@@ -3,6 +3,9 @@ import React from 'react';
 /* Import context consumer */
 import { Consumer } from '../context/context';
 
+/* Import components */
+import Icon from './Icon';
+
 const Stats = () => {
 
   return (
@@ -15,6 +18,8 @@ const Stats = () => {
         const totalPoints = context.players.reduce( (total, player) => {
           return total + player.score;
         }, 0);
+
+        const playersWithHighScore = context.actions.highestPlayers(context.players, context.highestScore);
 
         return (
           <table className="stats">
@@ -30,6 +35,10 @@ const Stats = () => {
               <tr>
                 <td>Highest Score:</td>
                 <td>{ context.highestScore }</td>
+              </tr>
+              <tr>
+                <td><Icon isHighScore={true} /></td>
+                <td>{ playersWithHighScore }</td>
               </tr>
             </tbody>
           </table>

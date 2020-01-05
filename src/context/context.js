@@ -37,9 +37,19 @@ export class Provider extends Component {
        const highScore = Math.max(...scores);
 
        if(highScore) {
-         return highScore
+         return highScore;
        }
-       return null
+       return null;
+    }
+
+    findPlayersWithHighestScore = (players, highestScore) => {
+        const scores = players.map(player => player.score);
+        const highestPlayers = scores.filter(score => score === highestScore);
+
+        if(highestPlayers.length && highestScore > 0) {
+            return highestPlayers.length;
+        }
+          return 0;
     }
 
    handleScoreChange = (index, delta) => {
@@ -84,7 +94,8 @@ export class Provider extends Component {
               actions: {
                 changeScore: this.handleScoreChange,
                 removePlayer: this.handleRemovePlayer,
-                addPlayer: this.handleAddPlayer
+                addPlayer: this.handleAddPlayer,
+                highestPlayers: this.findPlayersWithHighestScore
               }
            }}>
               { this.props.children }
