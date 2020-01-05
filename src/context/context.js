@@ -25,15 +25,27 @@ export class Provider extends Component {
             score: 0,
             id: 4
           }
-        ]
+        ],
+        highestScore: 0
     };
 
    // player id counter
    prevPlayerId = 4;
 
+   findMaxScore = () => {
+       const scores = this.state.players.map(player => player.score);
+       const highScore = Math.max(...scores);
+
+       if(highScore) {
+         return highScore
+       }
+       return null
+    }
+
    handleScoreChange = (index, delta) => {
      this.setState( prevState => ({
-       score: prevState.players[index].score += delta
+       score: prevState.players[index].score += delta,
+       highestScore: this.findMaxScore()
      }));
    }
  
@@ -68,6 +80,7 @@ export class Provider extends Component {
       return (
           <ScoreboardContext.Provider value={{
               players: this.state.players,
+              highestScore: this.state.highestScore,
               actions: {
                 changeScore: this.handleScoreChange,
                 removePlayer: this.handleRemovePlayer,

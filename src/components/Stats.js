@@ -27,6 +27,10 @@ const Stats = () => {
                 <td>Total Points:</td>
                 <td>{ totalPoints }</td>
               </tr>
+              <tr>
+                <td>Highest Score:</td>
+                <td>{ context.highestScore }</td>
+              </tr>
             </tbody>
           </table>
         );

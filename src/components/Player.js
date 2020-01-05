@@ -6,6 +6,7 @@ import { Consumer } from '../context/context';
 
 /* Import components */
 import Counter from './Counter';
+import Icon from './Icon';
 
 class Player extends PureComponent {
 
@@ -32,7 +33,8 @@ class Player extends PureComponent {
             return (
               <span className="player-name">
                 <button className="remove-player" onClick={() => context.actions.removePlayer(id)}>✖</button>
-                { name } {score}
+                { name }
+                <Icon isHighScore={score >= context.highestScore && context.highestScore !== 0}/>
               </span>
             );
           }}
