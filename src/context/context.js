@@ -32,6 +32,14 @@ export class Provider extends Component {
    // player id counter
    prevPlayerId = 4;
 
+   resetPalyersScore = () => {
+       let players = this.state.players;
+       
+       this.setState({
+           score: players.map(obj => obj.score = 0)
+       });
+   }
+
    findMaxScore = () => {
        const scores = this.state.players.map(player => player.score);
        const highScore = Math.max(...scores);
@@ -95,7 +103,8 @@ export class Provider extends Component {
                 changeScore: this.handleScoreChange,
                 removePlayer: this.handleRemovePlayer,
                 addPlayer: this.handleAddPlayer,
-                highestPlayers: this.findPlayersWithHighestScore
+                highestPlayers: this.findPlayersWithHighestScore,
+                resetPalyersScore: this.resetPalyersScore
               }
            }}>
               { this.props.children }
