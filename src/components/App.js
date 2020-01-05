@@ -3,6 +3,7 @@ import React from 'react';
 /* Import components */
 import Header from './Header';
 import PlayerList from './PlayerList';
+import AddPlayerForm from './AddPlayerForm';
 
 
 const App = () => {
@@ -10,7 +11,7 @@ const App = () => {
     <div className="scoreboard">
       <Header />
       <PlayerList />
-
+      <AddPlayerForm />
     </div>
   );
 }

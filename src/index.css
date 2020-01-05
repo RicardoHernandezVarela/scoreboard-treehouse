@@ -25,7 +25,7 @@ header h1 {
 /* FORMS */
 form {
   display: flex;
-  background-color: #8063FA;
+  background-color: #4caf50;
 }
 
 input[type=text] {
@@ -34,17 +34,17 @@ input[type=text] {
   margin: 15px 10px 15px 15px;
   padding: 10px;
   border-radius: 5px;
-  background-color: #5B45B9;
+  background-color: #388e3c;
   border-style: none;
   text-shadow: none;
   text-transform: uppercase;
-  color: #C7BCF8;
+  color: #fff;
   letter-spacing: 2px;
   outline: none;
 }
 
 input[type=text]::-webkit-input-placeholder{
-  color: #C7BCF8;
+  color: #fff;
   letter-spacing: 2px;
 }
 
@@ -52,12 +52,12 @@ input[type=text]:focus{
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-input[type=submit] {
+.add {
   display: block;
   font-size: .6em;
   margin: 15px 15px 15px 0; 
   padding: 10px;
-  background-color: #44338D;
+  background-color: #388e3c;
   border-radius: 5px;
   border: none;
   color: #fff;
@@ -66,6 +66,11 @@ input[type=submit] {
   text-shadow: none;
   text-transform: uppercase;
   cursor: pointer;
+}
+
+.add:hover {
+  background: #66bb6a;
+  color: #f5f5f5;
 }
 
 button, 
@@ -110,36 +115,36 @@ svg {
   letter-spacing: 2px;
 }
 
-  .player:last-of-type {
-    border-bottom-color: #D4CAFF;
-  }
+.player:last-of-type {
+  border-bottom-color: #D4CAFF;
+}
 
-  .player-name:hover .remove-player {
-    visibility: visible;
-  }
+.player-name:hover .remove-player {
+  visibility: visible;
+}
 
-  .player-name,
-  .counter-score {
-    color: #2F2366;
-  }
+.player-name,
+.counter-score {
+  color: #2F2366;
+}
 
-  .player-name {
-    flex-grow: 1;
-    line-height: 3.5em;
-    padding-left: 10px;
-  }
+.player-name {
+  flex-grow: 1;
+  line-height: 3.5em;
+  padding-left: 10px;
+}
 
-  .remove-player {
-    font-size: 1.15em;
-    border: none;
-    outline: none;
-    visibility: hidden;
-    color: #EF5350;
-    cursor: pointer;
-    margin: 0 10px 0 0;
-    padding: 0;
-    background: none;
-  }
+.remove-player {
+  font-size: 1.15em;
+  border: none;
+  outline: none;
+  visibility: hidden;
+  color: #EF5350;
+  cursor: pointer;
+  margin: 0 10px 0 0;
+  padding: 0;
+  background: none;
+}
 
 .stats,
 .stopwatch {
@@ -152,16 +157,16 @@ svg {
   font-weight: normal;
 }
 
-  .stats td:first-child {
-    text-align: right;
-    font-weight: normal;
-    letter-spacing: 2px;
-    font-size: .7em;
-  }
+.stats td:first-child {
+  text-align: right;
+  font-weight: normal;
+  letter-spacing: 2px;
+  font-size: .7em;
+}
 
-  .stats td:last-child {
-    text-align: left;
-  }
+.stats td:last-child {
+  text-align: left;
+}
 
 .stopwatch {
   padding: 15px 10px 5px 10px;
@@ -169,72 +174,72 @@ svg {
   background: #388e3c;
 }
 
-  .stopwatch-time {
-    display: block;
-    font-family: monospace;
-    font-size: 2.15em;
-  }
+.stopwatch-time {
+  display: block;
+  font-family: monospace;
+  font-size: 2.15em;
+}
 
-  .stopwatch button {
-    margin: 8px 5px;
-    background-color: #4caf50;
-    border-radius: 5px;
-    padding: 7px 8px;
-    border: none;
-    color: #fff;
-    letter-spacing: 2px;
-    font-weight: bold;
-    text-shadow: none;
-    text-transform: uppercase;
-  }
+.stopwatch button {
+  margin: 8px 5px;
+  background-color: #4caf50;
+  border-radius: 5px;
+  padding: 7px 8px;
+  border: none;
+  color: #fff;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-shadow: none;
+  text-transform: uppercase;
+}
 
-  .stopwatch button:hover,
-  input[type=submit]:hover {
-    background: #66bb6a;
-    color: #f5f5f5;
-    cursor: pointer;
-  }
+.stopwatch button:hover,
+input[type=submit]:hover {
+  background: #66bb6a;
+  color: #f5f5f5;
+  cursor: pointer;
+}
 
-  .stopwatch h2 {
-    font-size: .6em;
-    margin: 0;
-    font-weight: normal;
-    letter-spacing: 2px;
-  }
+.stopwatch h2 {
+  font-size: .6em;
+  margin: 0;
+  font-weight: normal;
+  letter-spacing: 2px;
+}
 
 .counter {
   display: flex;
   width: 190px;
 }
 
-  .counter-action {
-    border: none;
-    font-size: 1.15em;
-    font-weight: bold;
-    color: #B0AEBA;
-    background-color: #DCDCDC;
-    display: block;
-    padding: 20px 20px;
-    cursor: pointer;
-    outline: none;
-  }
+.counter-action {
+  border: none;
+  font-size: 1.15em;
+  font-weight: bold;
+  color: #B0AEBA;
+  background-color: #DCDCDC;
+  display: block;
+  padding: 20px 20px;
+  cursor: pointer;
+  outline: none;
+}
 
-  .counter-action:hover {
-    color: #fff;
-  }
+.counter-action:hover {
+  color: #fff;
+}
 
-  .increment:hover {
-    background: #83D97C;
-  }
+.increment:hover {
+  background: #83D97C;
+}
 
-  .decrement:hover {
-    background: #EF5350;
-  }
+.decrement:hover {
+  background: #EF5350;
+}
 
-  .counter-score {
-    flex-grow: 1;
-    text-align: center;
-    font-family: monospace;
-    font-size: 2em;
-    line-height: 2em;
-  }
+.counter-score {
+  flex-grow: 1;
+  text-align: center;
+  font-family: monospace;
+  font-size: 2em;
+  line-height: 2em;
+}

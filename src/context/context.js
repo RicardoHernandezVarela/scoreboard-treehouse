@@ -38,18 +38,22 @@ export class Provider extends Component {
    }
  
    handleAddPlayer = (name) => {
-     this.setState( prevState => {
-       return {
-         players: [
-           ...prevState.players,
-           {
-             name,
-             score: 0,
-             id: this.prevPlayerId += 1
-           }
-         ]
-       };
-     });
+       if(name !== '') {
+        this.setState( prevState => {
+            return {
+              players: [
+                ...prevState.players,
+                {
+                  name,
+                  score: 0,
+                  id: this.prevPlayerId += 1
+                }
+              ]
+            };
+          });
+       } else {
+           alert("YOU SHOULD ENTER A PLAYER'S NAME")
+       }
    }
  
    handleRemovePlayer = (id) => {
