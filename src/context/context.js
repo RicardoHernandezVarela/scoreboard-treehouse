@@ -34,9 +34,10 @@ export class Provider extends Component {
 
    resetPalyersScore = () => {
        let players = this.state.players;
-       
+
        this.setState({
-           score: players.map(obj => obj.score = 0)
+           score: players.map(obj => obj.score = 0),
+           highestScore: 0
        });
    }
 
@@ -47,7 +48,7 @@ export class Provider extends Component {
        if(highScore) {
          return highScore;
        }
-       return null;
+       return 0;
     }
 
     findPlayersWithHighestScore = (players, highestScore) => {
