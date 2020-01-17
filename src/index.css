@@ -196,7 +196,7 @@ svg {
 
 .stopwatch {
   padding: 15px 10px 5px 10px;
-  margin: -5px -10px -5px 62px;
+  margin: -5px -10px -5px 12%;
   background: #388e3c;
 }
 
@@ -268,4 +268,20 @@ input[type=submit]:hover {
   font-family: monospace;
   font-size: 2em;
   line-height: 2em;
+}
+
+@media (min-width: 320px) {
+  .stopwatch {
+    padding: 15px 10px 5px 10px;
+    margin: -5px -10px -5px 80px;
+    background: #388e3c;
+  }
+}
+
+@media (min-width: 375px) {
+  .stopwatch {
+    padding: 15px 10px 5px 10px;
+    margin: -5px -10px -5px 62px;
+    background: #388e3c;
+  }
 }
